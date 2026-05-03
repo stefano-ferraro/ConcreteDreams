@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concrete Dreams — From the Streets to the Streets</title>
+  <meta name="description" content="Milan-born streetwear. Handcrafted pieces from the concrete.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">Concrete Dreams</a>
+      <ul class="nav__links">
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="nav__lang" id="langToggle">EN</button>
+        <a href="#" class="nav__cart-btn">
+          <span class="nav__cart-label">Cart</span>
+          <span class="nav__cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Ticker ── -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track" id="tickerTrack">
+      <span>From the streets to the streets</span>
+      <span class="ticker__dot">·</span>
+      <span>Last Drop Live</span>
+      <span class="ticker__dot">·</span>
+      <span>Concrete Dreams</span>
+      <span class="ticker__dot">·</span>
+      <span>Milano</span>
+      <span class="ticker__dot">·</span>
+      <span>SS25</span>
+      <span class="ticker__dot">·</span>
+      <span>From the streets to the streets</span>
+      <span class="ticker__dot">·</span>
+      <span>Last Drop Live</span>
+      <span class="ticker__dot">·</span>
+      <span>Concrete Dreams</span>
+      <span class="ticker__dot">·</span>
+      <span>Milano</span>
+      <span class="ticker__dot">·</span>
+      <span>SS25</span>
+      <span class="ticker__dot">·</span>
+    </div>
+  </div>
+
+  <!-- ── Hero ── -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-text" aria-hidden="true">CD</div>
+    <div class="hero__content">
+      <p class="eyebrow">SS25 — Last Drop</p>
+      <h1 class="hero__title">
+        <span class="hero__title-line">From the</span>
+        <span class="hero__title-line hero__title-line--right">Streets</span>
+        <span class="hero__title-line">to the</span>
+        <span class="hero__title-line hero__title-line--right">Streets</span>
+      </h1>
+      <div class="hero__footer">
+        <p class="hero__desc">
+          Handcrafted pieces born from the concrete —<br>
+          made for those who move through the city with intention.
+        </p>
+        <a href="#collection" class="btn btn--white">Shop the Drop</a>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ── Drop Banner ── -->
+  <div class="drop-banner">
+    <p class="drop-banner__text">
+      <span class="drop-banner__label">Last Drop</span>
+      Paisley Rebellion Bomber — Limited units remaining
+    </p>
+    <a href="#collection" class="drop-banner__link">View Now →</a>
+  </div>
+
+  <!-- ── Collection ── -->
+  <section class="collection" id="collection">
+    <div class="collection__header">
+      <p class="eyebrow">— Collection</p>
+      <h2 class="section-title">The Drop</h2>
+    </div>
+
+    <div class="collection__grid">
+
+      <!-- Product 1: Bomber (featured large) -->
+      <article class="card card--featured" data-product="bomber">
+        <div class="card__image">
+          <div class="card__visual card__visual--dark">
+            <span class="card__visual-text">Paisley<br>Rebellion</span>
+            <div class="card__visual-accent"></div>
+          </div>
+          <div class="card__badges">
+            <span class="badge badge--drop">Last Drop</span>
+          </div>
+          <div class="card__hover-actions">
+            <button class="btn btn--white btn--sm add-to-cart" data-name="Paisley Rebellion Bomber" data-price="109.96">Quick Add</button>
+          </div>
+        </div>
+        <div class="card__body">
+          <div class="card__info">
+            <h3 class="card__name">Paisley Rebellion Bomber</h3>
+            <div class="card__pricing">
+              <s class="price price--old">€159.96</s>
+              <span class="price price--sale">€109.96</span>
+            </div>
+          </div>
+          <div class="card__sizes">
+            <button class="size size--sold" disabled title="Sold out">S</button>
+            <button class="size size--sold" disabled title="Sold out">M</button>
+            <button class="size size--sold" disabled title="Sold out">L</button>
+          </div>
+          <p class="card__status">Sold out — join the waitlist</p>
+        </div>
+      </article>
+
+      <!-- Product 2: Tee -->
+      <article class="card" data-product="tee">
+        <div class="card__image">
+          <div class="card__visual card__visual--light">
+            <span class="card__visual-text">GRorDT</span>
+          </div>
+          <div class="card__badges">
+            <span class="badge badge--seller">Best Seller</span>
+          </div>
+          <div class="card__hover-actions">
+            <button class="btn btn--black btn--sm add-to-cart" data-name="GRorDT Tee" data-price="49.96">Quick Add</button>
+          </div>
+        </div>
+        <div class="card__body">
+          <div class="card__info">
+            <h3 class="card__name">GRorDT Tee</h3>
+            <div class="card__pricing">
+              <span class="price price--current">€49.96</span>
+            </div>
+          </div>
+          <div class="card__sizes">
+            <button class="size" data-size="S">S</button>
+            <button class="size" data-size="M">M</button>
+            <button class="size" data-size="L">L</button>
+            <button class="size" data-size="XL">XL</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 3: Coming Soon -->
+      <article class="card card--coming-soon">
+        <div class="card__image">
+          <div class="card__visual card__visual--muted">
+            <span class="card__visual-text card__visual-text--sm">Next<br>Drop</span>
+            <p class="card__visual-sub">Coming Soon</p>
+          </div>
+        </div>
+        <div class="card__body">
+          <div class="card__info">
+            <h3 class="card__name">Unreleased</h3>
+            <div class="card__pricing">
+              <span class="price price--tba">TBA</span>
+            </div>
+          </div>
+          <a href="#newsletter" class="btn btn--outline btn--sm btn--full">Get Notified</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ── Manifesto Strip ── -->
+  <div class="manifesto">
+    <p class="manifesto__text">
+      We don't follow seasons.<br>We follow the streets.
+    </p>
+    <div class="manifesto__line"></div>
+  </div>
+
+  <!-- ── About ── -->
+  <section class="about" id="about">
+    <div class="about__inner">
+      <div class="about__left">
+        <p class="eyebrow eyebrow--light">— About</p>
+        <h2 class="section-title section-title--light">Born in<br>the concrete</h2>
+        <div class="about__number" aria-hidden="true">002</div>
+      </div>
+      <div class="about__right">
+        <p class="about__text">
+          Concrete Dreams is a Milan-born streetwear label shaped by the rhythms of urban life.
+          Every piece is a dialogue between the raw texture of the city and the craft of the hands that make it.
+        </p>
+        <p class="about__text">
+          Limited drops. No restock. No compromise.
+          Each release is a snapshot of a moment — wear it, live it, own it.
+        </p>
+        <div class="about__cta">
+          <a href="#contact" class="btn btn--outline-light">Get in touch</a>
+          <a href="#collection" class="btn btn--ghost">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Newsletter ── -->
+  <section class="newsletter" id="newsletter">
+    <div class="newsletter__inner">
+      <p class="eyebrow">— Inner Circle</p>
+      <h2 class="newsletter__title">Join<br>the circle</h2>
+      <p class="newsletter__sub">Exclusive drops, early access, straight to your inbox. No noise.</p>
+      <form class="newsletter__form" id="newsletterForm" novalidate>
+        <div class="newsletter__field">
+          <input
+            type="email"
+            name="email"
+            id="newsletterEmail"
+            class="newsletter__input"
+            placeholder="your@email.com"
+            required
+            autocomplete="email"
+          >
+          <button type="submit" class="btn btn--black newsletter__submit">Subscribe</button>
+        </div>
+        <p class="newsletter__message" id="newsletterMessage" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer" id="contact">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <p class="footer__logo">Concrete<br>Dreams</p>
+        <p class="footer__tagline">Milano, Italy</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <div class="footer__col">
+          <p class="footer__col-title">Shop</p>
+          <ul>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#collection">New Arrivals</a></li>
+            <li><a href="#collection">Bestsellers</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Info</p>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Stockists</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Legal</p>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 Concrete Dreams. All rights reserved.</p>
+      <div class="footer__payment" aria-label="Accepted payment methods">
+        <span>Visa</span>
+        <span>Mastercard</span>
+        <span>PayPal</span>
+        <span>Apple Pay</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Cart Drawer ── -->
+  <div class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-drawer__backdrop" id="cartBackdrop"></div>
+    <div class="cart-drawer__panel">
+      <div class="cart-drawer__header">
+        <h2 class="cart-drawer__title">Your Cart</h2>
+        <button class="cart-drawer__close" id="cartClose" aria-label="Close cart">✕</button>
+      </div>
+      <div class="cart-drawer__items" id="cartItems">
+        <p class="cart-drawer__empty">Your cart is empty.</p>
+      </div>
+      <div class="cart-drawer__footer" id="cartFooter" style="display:none">
+        <div class="cart-drawer__total">
+          <span>Total</span>
+          <span id="cartTotal">€0.00</span>
+        </div>
+        <a href="#" class="btn btn--black btn--full">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
