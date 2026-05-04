@@ -56,16 +56,26 @@ function initImages() {
 const cart = {
   items: [],
 
-  add(name, price, size) {
-    const key = name + '|' + (size || '');
-    const existing = this.items.find(i => i.key === key);
-    if (existing) {
-      existing.qty += 1;
-    } else {
-      this.items.push({ key, name, price: parseFloat(price), size: size || null, qty: 1 });
-    }
-    this.render();
-  },
+  add(name, price, size, image) {
+  const key = name + '|' + (size || '');
+  const existing = this.items.find(i => i.key === key);
+
+  if (existing) {
+    existing.qty += 1;
+    if (!existing.image && image) existing.image = image;
+  } else {
+    this.items.push({
+      key,
+      name,
+      price: parseFloat(price),
+      size: size || null,
+      qty: 1,
+      image: image || ''
+    });
+  }
+
+  this.render();
+},
 
   remove(key) {
     const idx = this.items.findIndex(i => i.key === key);
@@ -105,7 +115,13 @@ const cart = {
 
     bodyEl.innerHTML = this.items.map(item => `
       <div class="cart-item">
-        <div class="cart-item__thumb">${item.name.substring(0, 12)}</div>
+        <div class="cart-item__thumb">
+  ${
+    item.image
+      ? `<img src="${item.image}" alt="${item.name}">`
+      : `<span>${item.name.substring(0, 12)}</span>`
+  }
+</div>
         <div class="cart-item__info">
           <p class="cart-item__name">${item.name}</p>
           <p class="cart-item__meta">${item.size ? `Size: ${item.size} · ` : ''}Qty: ${item.qty}</p>
@@ -181,7 +197,9 @@ function initAddToCart() {
       const product = btn.closest('[data-product]') || btn.closest('.product');
       const size = product?.querySelector('.sz.selected')?.dataset.size ?? null;
 
-      cart.add(btn.dataset.name, btn.dataset.price, size);
+      const image = product?.querySelector('.product__photo')?.getAttribute('src') || '';
+
+      cart.add(btn.dataset.name, btn.dataset.price, size, image);
       cartDrawer.open();
 
       // Brief confirmation on the button itself
