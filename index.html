@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concrete Dreams</title>
+  <meta name="description" content="No one can stop the hunger. Concrete Dreams — from the streets to the streets.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,600&family=Oswald:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ══ NAVIGATION ══ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">Concrete Dreams</a>
+      <nav class="nav__links" aria-label="Main navigation">
+        <a href="#drop">Collections</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav__utils">
+        <button class="nav__lang" id="langToggle" aria-label="Switch language">EN</button>
+        <button class="nav__search-btn" aria-label="Search">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.4-4.4"/></svg>
+        </button>
+        <button class="nav__cart-btn" id="cartBtn" aria-label="Open cart">
+          Cart <span class="nav__count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ HERO ══ -->
+  <!--
+    HERO IMAGE: place any photo at images/hero.jpg
+    Portrait or landscape work — a dark overlay is applied automatically.
+    Remove the src to show the plain dark background.
+  -->
+  <section class="hero" id="hero">
+    <img class="hero__bg" src="images/hero.jpg" alt="" aria-hidden="true">
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <div class="hero__eyebrow">
+        <span class="hero__badge">SS25</span>
+        <span class="hero__rule" aria-hidden="true"></span>
+        <span class="hero__badge">Milano</span>
+      </div>
+
+      <h1 class="hero__headline">
+        <em class="hero__hl-script">Concrete Dreams</em>
+        <span class="hero__hl-block">No one</span>
+        <span class="hero__hl-block">can stop</span>
+        <span class="hero__hl-block hero__hl-block--accent">the hunger.</span>
+      </h1>
+
+      <div class="hero__footer">
+        <a href="#drop" class="btn btn--ghost-white">Explore the Drop</a>
+        <p class="hero__sub">From the streets to the streets</p>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-line"></span>
+      <span class="hero__scroll-label">Scroll</span>
+    </div>
+  </section>
+
+  <!-- ══ TICKER ══ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track" id="tickerTrack">
+      <span>No one can stop the hunger</span>
+      <span class="ticker__dot">·</span>
+      <span>Concrete Dreams</span>
+      <span class="ticker__dot">·</span>
+      <span>SS25</span>
+      <span class="ticker__dot">·</span>
+      <span>From the streets to the streets</span>
+      <span class="ticker__dot">·</span>
+      <span>No one can stop the hunger</span>
+      <span class="ticker__dot">·</span>
+      <span>Concrete Dreams</span>
+      <span class="ticker__dot">·</span>
+      <span>SS25</span>
+      <span class="ticker__dot">·</span>
+      <span>From the streets to the streets</span>
+      <span class="ticker__dot">·</span>
+    </div>
+  </div>
+
+  <!-- ══ THE DROP ══ -->
+  <section class="drop" id="drop">
+    <div class="drop__header">
+      <p class="eyebrow">— The Drop</p>
+      <h2 class="drop__title">SS25 Collection</h2>
+    </div>
+
+    <!-- ── Product 01 : Paisley Rebellion Bomber — image left ── -->
+    <!--
+      PRODUCT IMAGE: images/paisley-rebellion-bomber.jpg
+      Portrait ratio (3:4). The placeholder text shows when the file is missing.
+    -->
+    <article class="product product--img-left" id="product-bomber" data-product="bomber">
+      <div class="product__media">
+        <img
+          class="product__photo"
+          src="images/paisley-rebellion-bomber.jpg"
+          alt="Paisley Rebellion Bomber jacket"
+        >
+        <div class="product__ph" aria-hidden="true">
+          <span>Paisley<br>Rebellion</span>
+        </div>
+        <div class="product__num" aria-hidden="true">01</div>
+        <ul class="product__badges">
+          <li class="badge badge--orange">Last Drop</li>
+        </ul>
+      </div>
+
+      <div class="product__body">
+        <p class="eyebrow">Outerwear</p>
+        <h3 class="product__name">Paisley<br>Rebellion<br>Bomber</h3>
+        <div class="product__price">
+          <s class="price-old">€159.96</s>
+          <span class="price-now">€109.96</span>
+        </div>
+
+        <div class="product__sizes">
+          <p class="sizes__label">Size</p>
+          <div class="sizes__row">
+            <button class="sz sz--out" disabled title="Sold out">S</button>
+            <button class="sz sz--out" disabled title="Sold out">M</button>
+            <button class="sz sz--out" disabled title="Sold out">L</button>
+          </div>
+          <p class="sizes__note">
+            Sold out —
+            <a href="#newsletter" class="sizes__waitlist">join the waitlist</a>
+          </p>
+        </div>
+
+        <div class="product__actions">
+          <button class="btn btn--dark btn--full" disabled>Sold Out</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── Product 02 : GRorDT Tee — image right ── -->
+    <!--
+      PRODUCT IMAGE: images/grordt-tee.jpg
+      Portrait ratio (3:4). The placeholder text shows when the file is missing.
+    -->
+    <article class="product product--img-right" id="product-tee" data-product="tee">
+      <div class="product__body">
+        <p class="eyebrow">Tops</p>
+        <h3 class="product__name">GRorDT<br>Tee</h3>
+        <div class="product__price">
+          <span class="price-now">€49.96</span>
+        </div>
+
+        <div class="product__sizes">
+          <p class="sizes__label">Size</p>
+          <div class="sizes__row">
+            <button class="sz" data-size="S">S</button>
+            <button class="sz" data-size="M">M</button>
+            <button class="sz" data-size="L">L</button>
+            <button class="sz" data-size="XL">XL</button>
+          </div>
+        </div>
+
+        <div class="product__actions">
+          <button
+            class="btn btn--dark btn--full add-to-cart"
+            data-name="GRorDT Tee"
+            data-price="49.96"
+          >Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product__media">
+        <img
+          class="product__photo"
+          src="images/grordt-tee.jpg"
+          alt="GRorDT Tee"
+        >
+        <div class="product__ph product__ph--light" aria-hidden="true">
+          <span>GRorDT</span>
+        </div>
+        <div class="product__num" aria-hidden="true">02</div>
+        <ul class="product__badges">
+          <li class="badge">Best Seller</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <!-- ══ LOOKBOOK STRIP ══ -->
+  <!--
+    LOOKBOOK IMAGES:
+      images/look-1.jpg  (large left panel — portrait works best)
+      images/look-2.jpg  (top right)
+      images/look-3.jpg  (bottom right)
+    Drop the files in and they appear automatically.
+  -->
+  <section class="lookbook">
+    <div class="lookbook__header">
+      <p class="eyebrow">— Lookbook</p>
+      <h2 class="lookbook__title">SS25</h2>
+    </div>
+
+    <div class="lookbook__grid">
+      <div class="lookbook__cell lookbook__cell--main">
+        <img class="lookbook__img" src="images/look-1.jpg" alt="Lookbook photo 1">
+        <div class="lookbook__ph" aria-hidden="true">01</div>
+      </div>
+      <div class="lookbook__cell">
+        <img class="lookbook__img" src="images/look-2.jpg" alt="Lookbook photo 2">
+        <div class="lookbook__ph" aria-hidden="true">02</div>
+      </div>
+      <div class="lookbook__cell">
+        <img class="lookbook__img" src="images/look-3.jpg" alt="Lookbook photo 3">
+        <div class="lookbook__ph" aria-hidden="true">03</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══ -->
+  <section class="about" id="about">
+    <div class="about__inner">
+      <div class="about__left">
+        <p class="eyebrow eyebrow--dim">— About</p>
+        <blockquote class="about__quote">Who<br>we are.</blockquote>
+      </div>
+      <div class="about__right">
+        <h2 class="about__title">Concrete Dreams</h2>
+        <p class="about__body">
+          A streetwear brand shaped by the raw energy of urban life.
+          Every piece carries the texture of the streets — rough, real, and uncompromising.
+        </p>
+        <p class="about__body">
+          We don't follow trends. We follow the hunger.
+        </p>
+        <p class="about__slogan">NO ONE CAN STOP THE HUNGER.</p>
+        <a href="#contact" class="btn btn--outline-light">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ NEWSLETTER ══ -->
+  <section class="newsletter" id="newsletter">
+    <div class="newsletter__inner">
+      <p class="eyebrow">— Inner Circle</p>
+      <h2 class="newsletter__title">Join our<br>inner circle.</h2>
+      <p class="newsletter__sub">Exclusive updates, straight to your e-mail.</p>
+      <form class="newsletter__form" id="newsletterForm" novalidate>
+        <div class="newsletter__field">
+          <input
+            type="email"
+            id="newsletterEmail"
+            class="newsletter__input"
+            placeholder="your@email.com"
+            required
+            autocomplete="email"
+          >
+          <button type="submit" class="btn btn--orange">Subscribe</button>
+        </div>
+        <p class="newsletter__msg" id="newsletterMsg" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer" id="contact">
+    <div class="footer__top">
+      <p class="footer__logo">Concrete<br>Dreams</p>
+      <nav class="footer__cols" aria-label="Footer navigation">
+        <div class="footer__col">
+          <p class="footer__col-head">Shop</p>
+          <ul>
+            <li><a href="#drop">Collections</a></li>
+            <li><a href="#drop">New Arrivals</a></li>
+            <li><a href="#drop">Bestsellers</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-head">Info</p>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-head">Legal</p>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 Concrete Dreams. All rights reserved.</p>
+      <ul class="footer__pay" aria-label="Accepted payment methods">
+        <li>Visa</li>
+        <li>Mastercard</li>
+        <li>PayPal</li>
+        <li>Apple Pay</li>
+        <li>Amex</li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ══ CART DRAWER ══ -->
+  <div class="cart-drawer" id="cartDrawer" aria-hidden="true" role="dialog" aria-label="Shopping cart">
+    <div class="cart-drawer__backdrop" id="cartBackdrop"></div>
+    <div class="cart-drawer__panel">
+      <div class="cart-drawer__head">
+        <h2 class="cart-drawer__title">Your Cart</h2>
+        <button class="cart-drawer__close" id="cartClose" aria-label="Close cart">✕</button>
+      </div>
+      <div class="cart-drawer__body" id="cartBody">
+        <p class="cart-drawer__empty">Your cart is empty.</p>
+      </div>
+      <div class="cart-drawer__foot" id="cartFoot" hidden>
+        <div class="cart-drawer__total">
+          <span>Total</span>
+          <span id="cartTotal">€0.00</span>
+        </div>
+        <a href="#" class="btn btn--dark btn--full">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
