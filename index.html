@@ -100,14 +100,14 @@
 
     <!-- ── Product 01 : Paisley Rebellion Bomber — image left ── -->
     <!--
-      PRODUCT IMAGE: images/paisley-rebellion-bomber.jpg
+      PRODUCT IMAGE: images/jacket.jpg
       Portrait ratio (3:4). The placeholder text shows when the file is missing.
     -->
     <article class="product product--img-left" id="product-bomber" data-product="bomber">
       <div class="product__media">
         <img
           class="product__photo"
-          src="images/paisley-rebellion-bomber.jpg"
+          src="images/jacket.jpg"
           alt="Paisley Rebellion Bomber jacket"
         >
         <div class="product__ph" aria-hidden="true">
@@ -130,25 +130,25 @@
         <div class="product__sizes">
           <p class="sizes__label">Size</p>
           <div class="sizes__row">
-            <button class="sz sz--out" disabled title="Sold out">S</button>
-            <button class="sz sz--out" disabled title="Sold out">M</button>
-            <button class="sz sz--out" disabled title="Sold out">L</button>
+            <button class="sz" data-size="S">S</button>
+            <button class="sz" data-size="M">M</button>
+            <button class="sz" data-size="L">L</button>
           </div>
-          <p class="sizes__note">
-            Sold out —
-            <a href="#newsletter" class="sizes__waitlist">join the waitlist</a>
-          </p>
         </div>
 
         <div class="product__actions">
-          <button class="btn btn--dark btn--full" disabled>Sold Out</button>
+          <button
+            class="btn btn--dark btn--full add-to-cart"
+            data-name="Paisley Rebellion Bomber"
+            data-price="109.96"
+          >Add to Cart</button>
         </div>
       </div>
     </article>
 
     <!-- ── Product 02 : GRorDT Tee — image right ── -->
     <!--
-      PRODUCT IMAGE: images/grordt-tee.jpg
+      PRODUCT IMAGE: images/tee.jpg
       Portrait ratio (3:4). The placeholder text shows when the file is missing.
     -->
     <article class="product product--img-right" id="product-tee" data-product="tee">
@@ -181,7 +181,7 @@
       <div class="product__media">
         <img
           class="product__photo"
-          src="images/grordt-tee.jpg"
+          src="images/tee.jpg"
           alt="GRorDT Tee"
         >
         <div class="product__ph product__ph--light" aria-hidden="true">

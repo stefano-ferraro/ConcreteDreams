@@ -67,6 +67,17 @@ const cart = {
     this.render();
   },
 
+  remove(key) {
+    const idx = this.items.findIndex(i => i.key === key);
+    if (idx === -1) return;
+    if (this.items[idx].qty > 1) {
+      this.items[idx].qty -= 1;
+    } else {
+      this.items.splice(idx, 1);
+    }
+    this.render();
+  },
+
   total() {
     return this.items.reduce((sum, i) => sum + i.price * i.qty, 0);
   },
@@ -99,7 +110,14 @@ const cart = {
           <p class="cart-item__name">${item.name}</p>
           <p class="cart-item__meta">${item.size ? `Size: ${item.size} · ` : ''}Qty: ${item.qty}</p>
         </div>
-        <p class="cart-item__price">€${(item.price * item.qty).toFixed(2)}</p>
+        <div class="cart-item__right">
+          <p class="cart-item__price">€${(item.price * item.qty).toFixed(2)}</p>
+          <button
+            class="cart-item__remove"
+            data-key="${item.key}"
+            aria-label="Remove ${item.name} from cart"
+          >✕</button>
+        </div>
       </div>
     `).join('');
 
@@ -125,6 +143,12 @@ const cartDrawer = {
 
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && this.isOpen) this.close();
+    });
+
+    // Remove-item delegation — lives on the static body container
+    document.getElementById('cartBody')?.addEventListener('click', e => {
+      const btn = e.target.closest('.cart-item__remove');
+      if (btn) cart.remove(btn.dataset.key);
     });
   },
 
@@ -226,8 +250,8 @@ function initNav() {
     ticking = true;
     requestAnimationFrame(() => {
       nav.style.borderBottomColor = window.scrollY > 60
-        ? 'rgba(200, 112, 58, 0.35)'
-        : 'rgba(200, 112, 58, 0.18)';
+        ? 'rgba(255, 154, 72, 0.4)'
+        : 'rgba(255, 154, 72, 0.18)';
       ticking = false;
     });
   }, { passive: true });

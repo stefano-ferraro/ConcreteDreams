@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════
    Concrete Dreams — Alternative Redesign
-   Palette: Black · Off-White · Orange (#C8703A)
+   Palette: Black · Off-White · Orange (#ff9a48)
    Fonts: Cormorant Garamond · Oswald · Inter
 ═══════════════════════════════════════════ */
 
@@ -10,9 +10,9 @@
   --black:    #0D0D0D;
   --white:    #F8F5F0;   /* warm off-white matching brand cream */
   --cream:    #EDE8DF;
-  --orange:   #C8703A;   /* brand orange from logo/posts */
-  --orange-d: #A85C2E;
-  --orange-t: rgba(200, 112, 58, 0.12); /* tinted orange for backgrounds */
+  --orange:   #ff9a48;   /* brand orange */
+  --orange-d: #e07830;   /* darker hover variant */
+  --orange-t: rgba(255, 154, 72, 0.12); /* tinted orange for backgrounds */
 
   --grey-100: #E2DDD5;
   --grey-200: #C8C3BB;
@@ -145,7 +145,7 @@ s      { text-decoration: line-through; }
   background: rgba(13, 13, 13, 0.96);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(200, 112, 58, 0.18);
+  border-bottom: 1px solid rgba(255, 154, 72, 0.18);
   transition: border-color 0.3s ease;
 }
 .nav__inner {
@@ -787,8 +787,8 @@ s      { text-decoration: line-through; }
   text-transform: uppercase;
   color: var(--orange);
   padding: 20px 0;
-  border-top: 1px solid rgba(200, 112, 58, 0.22);
-  border-bottom: 1px solid rgba(200, 112, 58, 0.22);
+  border-top: 1px solid rgba(255, 154, 72, 0.22);
+  border-bottom: 1px solid rgba(255, 154, 72, 0.22);
   margin: 20px 0 28px;
 }
 
@@ -1049,13 +1049,27 @@ s      { text-decoration: line-through; }
   font-size: 12px;
   color: var(--grey-500);
 }
+.cart-item__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
 .cart-item__price {
   font-family: var(--display);
   font-size: 14px;
   font-weight: 600;
   color: var(--orange);
-  flex-shrink: 0;
 }
+.cart-item__remove {
+  font-size: 13px;
+  line-height: 1;
+  color: var(--grey-200);
+  transition: color 0.15s;
+  padding: 2px;
+}
+.cart-item__remove:hover { color: var(--black); }
 
 .cart-drawer__foot {
   padding: 20px 28px 32px;
