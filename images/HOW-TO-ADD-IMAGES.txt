@@ -1,0 +1,43 @@
+HOW TO ADD IMAGES — Concrete Dreams (Alternative Redesign)
+──────────────────────────────────────────────────────────
+
+Drop your photos into this folder with the exact filenames below.
+The site detects them automatically — no code changes needed.
+If a file is missing, the styled text placeholder shows instead.
+
+
+HERO
+────
+  hero.jpg
+  Full-screen background behind the headline.
+  Recommended: 1920 × 1080 px minimum, landscape.
+  Dark overlay is applied automatically — any exposure works.
+
+
+PRODUCT CARDS
+─────────────
+  paisley-rebellion-bomber.jpg   → Paisley Rebellion Bomber (left column)
+  grordt-tee.jpg                 → GRorDT Tee (right column)
+
+  Recommended: 800 × 1066 px (3:4 portrait).
+  The image is cropped top-anchored, so frame the model from the waist up.
+  Format: JPG, PNG, or WebP.
+
+
+LOOKBOOK
+────────
+  look-1.jpg   Large left panel (portrait preferred, 3:4)
+  look-2.jpg   Top-right cell
+  look-3.jpg   Bottom-right cell
+
+  Any of the three can be left out — the placeholder stays visible.
+
+
+ADDING A NEW PRODUCT
+─────────────────────
+1. Add the image file here (e.g. new-hoodie.jpg).
+2. In index.html, copy an existing <article class="product ..."> block.
+3. Update the data-product attribute, product name, price, sizes, and the
+   img src to point at your new file.
+4. Alternate between product--img-left and product--img-right for the
+   layout to keep the editorial alternating rhythm.
