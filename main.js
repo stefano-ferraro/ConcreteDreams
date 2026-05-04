@@ -253,8 +253,43 @@ function initReveal() {
   targets.forEach(el => observer.observe(el));
 }
 
+/* ── Image loading: show real photo, hide placeholder when image is present ── */
+function initImages() {
+  // Product card photos
+  document.querySelectorAll('.card__photo').forEach(img => {
+    const reveal = () => {
+      img.style.display = 'block';
+      const visual = img.parentElement.querySelector('.card__visual');
+      if (visual) visual.style.display = 'none';
+    };
+    if (img.complete && img.naturalWidth > 0) {
+      reveal();
+    } else {
+      img.addEventListener('load', reveal);
+      // error: keep placeholder, hide broken img
+      img.addEventListener('error', () => { img.style.display = 'none'; });
+    }
+  });
+
+  // Hero photo
+  const heroPhoto = document.querySelector('.hero__photo');
+  if (heroPhoto) {
+    const revealHero = () => {
+      heroPhoto.style.display = 'block';
+      heroPhoto.closest('.hero')?.classList.add('has-photo');
+    };
+    if (heroPhoto.complete && heroPhoto.naturalWidth > 0) {
+      revealHero();
+    } else {
+      heroPhoto.addEventListener('load', revealHero);
+      heroPhoto.addEventListener('error', () => { heroPhoto.style.display = 'none'; });
+    }
+  }
+}
+
 /* ── Boot ── */
 document.addEventListener('DOMContentLoaded', () => {
+  initImages();
   cartDrawer.init();
   initAddToCart();
   initSizeSelector();

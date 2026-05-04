@@ -449,6 +449,41 @@ a  { color: inherit; text-decoration: none; }
 
 .card--featured .card__image { aspect-ratio: 2/3; }
 
+/* Real product photo — hidden until JS confirms it loaded */
+.card__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 2;
+  display: none; /* shown by JS on load */
+  transition: transform 0.5s var(--ease-out);
+}
+.card__image:hover .card__photo { transform: scale(1.03); }
+
+/* Hero background photo */
+.hero__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  display: none; /* shown by JS on load */
+}
+/* Darken the hero photo so text stays legible */
+.hero.has-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.52);
+  z-index: 0;
+  pointer-events: none;
+}
+
 .card__visual {
   width: 100%;
   height: 100%;

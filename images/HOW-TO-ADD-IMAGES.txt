@@ -1,0 +1,34 @@
+HOW TO ADD IMAGES
+─────────────────
+
+Drop your photos into this folder with the exact filenames below.
+The site automatically shows the image once the file exists.
+If a file is missing, the styled text placeholder shows instead — no broken images.
+
+
+PRODUCT CARDS
+─────────────
+  paisley-rebellion-bomber.jpg   → Paisley Rebellion Bomber (featured, large card)
+  grordt-tee.jpg                 → GRorDT Tee
+
+  Recommended size: 800 × 1066 px  (3:4 portrait ratio)
+  Format: JPG, PNG or WebP
+  The image is cropped to fill the card, focused on the top — frame models from the waist up.
+
+
+HERO BACKGROUND
+───────────────
+  hero.jpg   → Full-screen background behind the homepage headline
+
+  Recommended size: 1920 × 1080 px minimum (landscape)
+  A dark overlay is applied automatically so the white text stays readable.
+  Works best with moody, dark-toned lifestyle or street photos.
+
+
+ADDING A NEW PRODUCT
+─────────────────────
+1. Drop the image file here (e.g. new-hoodie.jpg)
+2. In index.html, inside the new product's <div class="card__image">, add:
+      <img class="card__photo" src="images/new-hoodie.jpg" alt="Product name">
+   Place it as the FIRST child, before the <div class="card__visual"> line.
+3. Save. Done.
